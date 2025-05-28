@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 250px;
+            padding: 15px;
+            background-color: #f7f7f7;
+        }
+        h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .site-info {
+            font-weight: bold;
+            color: #333;
+        }
+        button {
+            margin-top: 10px;
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Current Site Being Tracked:</h2>
+    <div class="site-info" id="site">Loading...</div>
+    <button id="refresh">Refresh</button>
+
+    <script>
+        function extractHostname(url) {
+            try {
+                const hostname = new URL(url).hostname.toLowerCase();
+                return hostname.startsWith("www.") ? hostname.slice(4) : hostname;
+            } catch {
+                return "Unknown";
+            }
+        }
+
+        async function updateCurrentSite() {
+            const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+            const site = extractHostname(tab.url);
+            document.getElementById("site").textContent = site;
+        }
+
+        document.getElementById("refresh").addEventListener("click", updateCurrentSite);
+
+        updateCurrentSite();
+    </script>
+</body>
+</html>

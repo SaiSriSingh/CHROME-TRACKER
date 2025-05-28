@@ -1,0 +1,14 @@
+{
+    "default": {
+        "2025-05-17": {
+            "127.0.0.1": 96,
+            "chatgpt.com": 4,
+            "wattpad.com": 6,
+            "ilovepdf.com": 14,
+            "hackerrank.com": 12,
+            "youtube.com": 7,
+            "newtab": 5,
+            "extensions": 1
+        }
+    }
+}
