@@ -23,5 +23,8 @@ The user interface of the extension is simple and clean. It shows a summary of t
 Users can easily see where most of their time is going. This data can help people identify distractions and manage their time better online. 
 For example, if someone realizes they are spending too much time on social media during work hours, they can take action to reduce it.
 #OUTPUT :
+![Image](https://github.com/user-attachments/assets/c87945c2-64d2-43d2-842c-e439495bb429)
+![Image](https://github.com/user-attachments/assets/9193b6b9-c217-4631-985f-19111a6ed071)
+![Image](https://github.com/user-attachments/assets/c5631adf-9939-4c80-9cb9-cb41329a2b21)
 
 
